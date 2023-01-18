@@ -1,0 +1,29 @@
+<body>
+<div class="side-bar" style="text-align: center; overflow: hidden;">
+    <img src="../assets/icon.png"><pre></pre>
+    <h2>User Id: {{real_id}}</h2>
+   <pre></pre><pre></pre>
+    <button (click)="logout()" style="padding: 20px 40px;color:antiquewhite ;background-color: rgb(143, 129, 4);">Logout</button>
+    <button (click)="deleteUser()" style="padding: 20px 20px;margin-top: 22rem; background-color: rgb(255, 58, 58); color: white;">Delete Account</button>
+    
+</div>
+
+<div class="main">
+    <br>
+    <h2 class="day">Today : {{today}}</h2>
+    <h1 style="color: blue; text-decoration: dotted; margin-top: 2%;margin-left: 60px;">Welcome Back <span style="text-transform: capitalize;">{{real_name}}</span></h1><pre></pre>
+    <div style="margin-left: 15%;">
+    
+    <h2>Save your work here</h2>
+    <form (ngSubmit)="addItem(work.title)">
+    <label><input type="text" [(ngModel)]="work.title" name="title"></label>
+    <input type="submit" id="btnSubmit" value="Add work" class="submit">
+    <button (click)="restore()" class="restore">Restore</button>
+    </form><pre></pre>
+    <ul style="text-decoration: solid;">
+        <li *ngFor="let item of real_task; let i = index"[attr.data-index]="i">{{item}}<span><button class="remove" (click)="remove(i)">X</button></span></li>
+    </ul></div>
+    
+
+</div>
+</body>

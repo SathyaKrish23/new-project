@@ -1,0 +1,27 @@
+<body class="reg">
+    <div class="card">
+        <div class="container">
+        <form #registerForm="ngForm" (ngSubmit)="registerUser()">
+        <img src="../assets/logo2.gif" style="animation-iteration-count: 2;"><pre></pre>
+            
+        <input type="text"  name="name" class="form-control form-control-lg" placeholder="Name" [(ngModel)] ="user.name" required><br><br>
+            
+            
+        <input type="password"  name="pin" class="form-control form-control-lg" placeholder="Password" [(ngModel)] ="user.password" required><br><br>
+            
+            
+        <input type="email" name="email" class="form-control form-control-lg" placeholder="Email address" [(ngModel)] ="user.email"><br><br>
+        
+        <div style="font-size: 18px;" >
+        <input type="radio" name="gender" value="male" [(ngModel)] ="user.gender"> Male 
+        <input type="radio" name="gender"  value="female" [(ngModel)] ="user.gender" style="margin-left: 20px;"><span style="color: rgb(255, 30, 67);"> Female </span> 
+        </div><br><br>
+            
+        <input class="btn" type="submit" value="Submit">
+        </form><br>
+        <p>Already have an account ? <a routerLink="/login">Sign in</a> </p>
+
+        </div>
+    </div>
+   
+</body>
